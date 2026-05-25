@@ -1,6 +1,5 @@
 import express from "express";
 import path from "path";
-import { createServer as createViteServer } from "vite";
 import { MongoClient, Db } from "mongodb";
 import dotenv from "dotenv";
 
@@ -217,6 +216,7 @@ app.delete("/api/todos/:id", async (req, res) => {
 // Serve frontend assets in production or use Vite dev server in development
 async function start() {
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",

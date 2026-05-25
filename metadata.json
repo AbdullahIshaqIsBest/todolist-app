@@ -1,0 +1,6 @@
+{
+  "name": "MongoDB Atlas Todo App",
+  "description": "A gorgeous, responsive Todo list application featuring seamless integration with MongoDB Atlas, rich animations, categories, and real-time status.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
